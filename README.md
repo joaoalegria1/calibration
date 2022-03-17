@@ -1,5 +1,5 @@
-# Calibration
-> Repository created in the subject of Master Thesis\
+# Calibration Repository
+> Repository created in the subject of Master Thesis
 
 Journey into calibration. From DLT, Zhang, binocular Calibration etc.. Some of the scripts are inspired by other github users. If so, credits are displayed.
 - **0. Camera models with Numpy and Matplotlib**
