@@ -1,6 +1,5 @@
 # calibration
-Calibraiton script simulation in python 
-
+Journey into calibration. From DLT, Zhang, binocular Calibratio etc.. Some of the scripts are inspired by other github users. If so, credits are displayed.
 - **0. Camera models with Numpy and Matplotlib**
   - In this script we will experience different camera models and play with then in terms of rotations and translations.\
     This script is a condensation of the work done by [Mario Larcher](https://github.com/mnslarcher/camera-models) with some added features done by me.
