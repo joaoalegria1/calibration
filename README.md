@@ -26,6 +26,6 @@ Journey into calibration. From DLT, Zhang, binocular Calibration etc.. Some of t
 - **1.6 Ideal stereo calibration**
   - Ideal calibration using ideal checkerboards using OpenCV Zhang calibration method for stereo cameras.
 - **2.1 Ideal stereo calibration with pixel**
--  - This scripts, adds pixelization to the previous.
+   - This scripts, adds pixelization to the previous.
 
   
