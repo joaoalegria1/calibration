@@ -277,5 +277,5 @@ def get_image_points(rand_points,px,py,thetax = 0, thetay = 0, thetaz = 0,trans_
 
     x_arr = np.array(x)
 
-    return x_arr, rand_points, E,K
+    return x_arr, rand_points, E, K, P
 
