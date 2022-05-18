@@ -75,7 +75,7 @@ def get_calibration_matrix(
     K : np.ndarray
         calibration matrix
     """
-    K = np.diag([mx, my, 1]) @ np.array([[f, 0.0, px], [0.0, f, py], [0.0, 0.0, 1.0]])
+    K = np.array([[f*mx, 0.0, px], [0.0, f*my, py], [0.0, 0.0, 1.0]])
     return K
 
 
@@ -228,7 +228,7 @@ def get_plucker_matrix(A: np.ndarray, B: np.ndarray) -> np.ndarray:
 
 
 
-def get_image_points(rand_points,px,py,thetax = 0, thetay = 0, thetaz = 0,trans_x = 0,trans_y = 0,trans_z = 0,F = 3.0):
+def get_image_points(rand_points,px,py,thetax = 0, thetay = 0, thetaz = 0,trans_x = 0,trans_y = 0,trans_z = 0,F = 3.0,mx = 1,my = 1):
     """
     from the world points, obtains the correspondent image coordinate
 
@@ -262,8 +262,8 @@ def get_image_points(rand_points,px,py,thetax = 0, thetay = 0, thetaz = 0,trans_
     rand_points : np.array
         world coordinates
     """
-    K = get_calibration_matrix(F, px=px, py=py)                                             # calibration matrix
-    P, E = get_projection_matrix(F, px=px,py =py,theta_x = thetax,theta_y = thetay,theta_z = thetaz,tx = trans_x,ty = trans_y, tz = trans_z)                        # projection matrix
+    K = get_calibration_matrix(F, px=px, py=py,mx=mx,my=my)                                             # calibration matrix
+    P, E = get_projection_matrix(F, px=px,py =py,theta_x = thetax,theta_y = thetay,theta_z = thetaz,tx = trans_x,ty = trans_y, tz = trans_z,mx = mx,my =my)                        # projection matrix
     #print("\nCalibration matrix (K):\n", K)
     #print("\nProjection matrix (P):\n", P)
 
