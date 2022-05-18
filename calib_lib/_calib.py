@@ -189,6 +189,10 @@ def get_projection_matrix(
         angle in the y axis in radians
     theta_z : float
         angle in the z axis in radians
+    mx : float
+        pixel density in the x diretion
+    my : float
+        pixel density in the y diretion
     Returns
     -------
     P : np.array
@@ -254,7 +258,10 @@ def get_image_points(rand_points,px,py,thetax = 0, thetay = 0, thetaz = 0,trans_
         angle in the y axis in radians
     thetaz : float
         angle in the z axis in radians
-
+    mx : float
+        pixel density in the x diretion
+    my : float
+        pixel density in the y diretion
     Returns
     -------
     x_arr:    np.array
