@@ -5,8 +5,10 @@ email : joaoalegria31@ua.pt
 Msc Thesis
 
 -----------------------
-31/10/2022: file creation
+31/01/2022: file creation
 """
+
+from ._variables_pixel import *
 
 from ._calib import (
     get_calibration_matrix,
@@ -15,11 +17,19 @@ from ._calib import (
     get_extrinsic_matrix,
     get_projection_matrix,
     get_plucker_matrix,
-    get_image_points
-)
+    get_image_points,
+    calibration,
+    create_1024_point_chess)
+
 from ._DLT_lib import DLT, SVD
 from ._homogeneous import to_homogeneus_arr, to_homogeneous, to_inhomogeneous
-from ._checkerboard import create_chessboard, get_chessboard_rot_trans, get_plane
+from ._checkerboard import (
+    create_chessboard,
+    get_chessboard_rot_trans,
+    createcircle_3d,
+    create_chessboard_4points,
+    create_chessboard_1024points,
+    get_plane)
 from ._normalization import normalization,denormalization
 from ._image import Image, ImagePlane
 from ._figures import GenericPoint, Polygon
@@ -60,6 +70,12 @@ __all__ = [
     "denormalization",
     "get_translation_matrix",
     "get_extrinsic_matrix",
-    "get_image_points"
+    "get_rotation_matrix",
+    "get_image_points",
+    "calibration",
+    "createcircle_3d",
+    "create_chessboard_4points",
+    "create_chessboard_1024points",
+    "create_1024_point_chess"
 ]
-__version__ = "0.0.1"
+__version__ = "0.0.2"
