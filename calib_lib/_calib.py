@@ -354,7 +354,7 @@ def create_1024_point_chess(xrange,yrange,zrange,chess_dimx = chess_dimx,chess_d
 
     translst= []
     chess_pts = []
-    rotangles = [[np.pi/4,0,np.pi/2]]
+    rotangles = [[0,0,0],[np.pi/4,0,np.pi/2],[0,np.pi/4,np.pi/2],[0,np.pi/4,-np.pi/2],[np.pi/4,0,-np.pi/2]]
 
     for z in zrange:
         for x in xrange:
