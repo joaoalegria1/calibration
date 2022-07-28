@@ -12,12 +12,18 @@ Journey into calibration. From DLT, Zhang, binocular Calibration etc.. Some of t
     This script is a condensation of the work done by [Mario Larcher](https://github.com/mnslarcher/camera-models) with some added features done by me.
     In order to run the program it's necessary to import the libraries used in the original project.( those can be find in the github)
 - **1. Single camera calibration using DLT**
+  - This script does calibration using DLT using predefined world and camera points.
+- **1.1 Single Camera calibration usgin DLT and normalization with predefined points.**
+  - This scripts adds to the previous normalization and compares both option( w/ and without normalization).
   - It will use predefined world and image coordinates and then calculate the projective matrix using DLT transform and retrieve the geometric error.
-- **1.2 Ideal calibration with DLT.**
+- **1.2 Ideal single camera calibration using DLT and random points.**
+  - Compared with the point 1.1, this script uses random world points and obtain it's correspondence in the 2D plan. From that, calibration it's done.
   - In this part is it intented to achieve ideal calibration using DLT.\
     It is important to know the calibration matrix in advance. Otherwise, if we generate world points and image points at random with the purpose of finding the projection matrix, the points generate might not have real use correspondence.
-  1. Calibration using DLT without normalization
-  2. Calibration using DLT with normalization
+- **1.2.1 Calibration using DLT w/ normalization **
+  -  Adds to the previous scripts normalization
+- **1.2.2 Calibration using DLT w/ normalization and LM**
+  - Adds to the previous scripts Levenberg-Marquad optimization.
 - **1.3 Harry's corner check**
   - This scripts uses an image to check harry's corner detection method from OpenCV.
 - **1.4 Still in the worls**
@@ -27,5 +33,6 @@ Journey into calibration. From DLT, Zhang, binocular Calibration etc.. Some of t
   - Ideal calibration using ideal checkerboards using OpenCV Zhang calibration method for stereo cameras.
 - **2.1 Ideal stereo calibration with pixel**
    - This scripts, adds pixelization to the previous.
+- **3. Realistic simulation setup**
 
   
