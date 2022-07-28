@@ -20,7 +20,7 @@ Journey into calibration. From DLT, Zhang, binocular Calibration etc.. Some of t
   - Compared with the point 1.1, this script uses random world points and obtain it's correspondence in the 2D plan. From that, calibration it's done.
   - In this part is it intented to achieve ideal calibration using DLT.\
     It is important to know the calibration matrix in advance. Otherwise, if we generate world points and image points at random with the purpose of finding the projection matrix, the points generate might not have real use correspondence.
-- **1.2.1 Calibration using DLT w/ normalization **
+- **1.2.1 Calibration using DLT w/ normalization**
   -  Adds to the previous scripts normalization
 - **1.2.2 Calibration using DLT w/ normalization and LM**
   - Adds to the previous scripts Levenberg-Marquad optimization.
@@ -34,5 +34,15 @@ Journey into calibration. From DLT, Zhang, binocular Calibration etc.. Some of t
 - **2.1 Ideal stereo calibration with pixel**
    - This scripts, adds pixelization to the previous.
 - **3. Realistic simulation setup**
-
-  
+- **3.3.4 Realistic simulation at 2 meters**
+  - Using the previous method, it is calculate the calibration parameters and the subsquent matrixes and error for a calibration at 2 meters
+- **3.3.4.1 Realistic simulation at 2 meters for 12x8**
+  - Using the previous script, the only change is the chessboard calibration, from 13x9 to 12x8.
+- **3.3.5 Reprojection error realistic simulation**
+  - Reprojection error and triangulation for 2 meters with the data from 20, 80 and 180 chessboards at 2 meters
+- **3.3.5.1 Reprojection error realistic simulation for 180**
+  - Reprojection error and triangulation for 180 chessboard at 2 meters. This script tests different subpixelgrid( integration factor) 32,64,128.
+- **4.1 Camera calibration using the physical setup**
+  - Using images from the physical setup, calibrate using OpenCV at 2 meters.
+- **4.1.1 Reprojection and triangulation error**
+  - Test the reprojection and triangulation error using the matrixes from the previous script.
