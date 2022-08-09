@@ -48,6 +48,8 @@ Journey into calibration. From DLT, Zhang, binocular Calibration etc.. Some of t
   - **3.3.4.1 Realistic simulation at 4 meters for 12x8**
 - **3.3.5 Reprojection error realistic simulation**
   - Reprojection error and triangulation for 2 meters with the data from 20, 80 and 180 chessboards at 2 meters
+- **3.3.5 Reprojection error at 2 meters for 12x8**
+  - Same as the previous but now with more chessboard(5,20,45,80,125,180), but in the format of 12x8(96 points)
 - **3.3.5.1 Reprojection error realistic simulation for 180**
   - Reprojection error and triangulation for 180 chessboard at 2 meters. This script tests different subpixelgrid( integration factor) 32,64,128.
 - **4.1 Camera calibration using the physical setup**
