@@ -37,10 +37,8 @@ Journey into calibration. From DLT, Zhang, binocular Calibration etc.. Some of t
 - **3.3.3.1 Realistic simulation setup**
 - **3.3.3.2 Centroid estimation for 2 meters**
   - Script where the centroid estimation is done. For 2 meters.
-- **3.3.3.2 Centroid estimation for 3 meters**
-  - Similiar to the previous, but for 3 meters.
-- **3.3.3.2 Centroid estimation for 4 meters**
-  - Similiar to the previous,but for 4 meters.
+  - **3.3.3.2 Centroid estimation for 3 meters**
+  - **3.3.3.2 Centroid estimation for 4 meters**
 - **3.3.4 Realistic simulation at 2 meters**
   - Using the previous method, it is calculate the calibration parameters and the subsquent matrixes and error for a calibration at 2 meters
 - **3.3.4.1 Realistic simulation at 2 meters for 12x8**
