@@ -35,12 +35,19 @@ Journey into calibration. From DLT, Zhang, binocular Calibration etc.. Some of t
    - This scripts, adds pixelization to the previous.
 - **3. Realistic simulation setup**
 - **3.3.3.1 Realistic simulation setup**
-- **3.3.3.2 Realistic simulation setup**
-  - Script where the centroid estimation is done.
+- **3.3.3.2 Centroid estimation for 2 meters**
+  - Script where the centroid estimation is done. For 2 meters.
+- **3.3.3.2 Centroid estimation for 3 meters**
+  - Similiar to the previous, but for 3 meters.
+- **3.3.3.2 Centroid estimation for 4 meters**
+  - Similiar to the previous,but for 4 meters.
 - **3.3.4 Realistic simulation at 2 meters**
   - Using the previous method, it is calculate the calibration parameters and the subsquent matrixes and error for a calibration at 2 meters
 - **3.3.4.1 Realistic simulation at 2 meters for 12x8**
   - Using the previous script, the only change is the chessboard calibration, from 13x9 to 12x8.
+  - **3.3.4.1 Realistic simulation at 2 meters for 12x8**
+  - **3.3.4.1 Realistic simulation at 3 meters for 12x8**
+  - **3.3.4.1 Realistic simulation at 4 meters for 12x8**
 - **3.3.5 Reprojection error realistic simulation**
   - Reprojection error and triangulation for 2 meters with the data from 20, 80 and 180 chessboards at 2 meters
 - **3.3.5.1 Reprojection error realistic simulation for 180**
