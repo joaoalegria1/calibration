@@ -19,7 +19,8 @@ from ._calib import (
     get_plucker_matrix,
     get_image_points,
     calibration,
-    create_1024_point_chess)
+    create_1024_point_chess,
+    create_1024_circle)
 
 from ._DLT_lib import DLT, SVD
 from ._homogeneous import to_homogeneus_arr, to_homogeneous, to_inhomogeneous
@@ -76,6 +77,7 @@ __all__ = [
     "createcircle_3d",
     "create_chessboard_4points",
     "create_chessboard_1024points",
-    "create_1024_point_chess"
+    "create_1024_point_chess",
+    "create_1024_circle"
 ]
 __version__ = "0.0.2"

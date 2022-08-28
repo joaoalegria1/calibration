@@ -435,3 +435,45 @@ def create_1024_point_chess(xrange,yrange,zrange,chess_dimx = chess_dimx,chess_d
     print("Image points: ",x_zhang_L.shape)
 
     return world_pts_arr,x_zhang_R,x_zhang_L,P_R,P_L  
+
+
+def create_1024_circle(rand_points,px,py,thetax = 0, thetay = 0, thetaz = 0,trans_x = 0,trans_y = 0,trans_z = 0,F = 16.0,mx = 1,my = 1,radius = radius, npoints = 1024):
+
+    translst= []
+    chess_pts = []
+    rotangles = [[0,0,0]]
+
+
+
+
+    # array to save the circles in 3D
+    spot_array = np.zeros((rand_points.shape[0],npoints,3))
+    out_x = np.zeros((rand_points.shape[0],npoints,1))
+    out_y = np.zeros((rand_points.shape[0],npoints,1))
+    #circle array coordinates
+    circle_x = np.zeros((rand_points.shape[0],npoints))
+    circle_y = np.zeros((rand_points.shape[0],npoints))
+    cx0 = np.zeros((rand_points.shape[0]))
+    cy0 = np.zeros((rand_points.shape[0]))
+    r0 = np.zeros((rand_points.shape[0]))
+
+
+    for coord_i ,(x_d,y_d,z_d) in enumerate(rand_points):
+        circle_x[coord_i],circle_y[coord_i],cx0[coord_i],cy0[coord_i],r0[coord_i] = createcircle_3d(radius,x_d,y_d,npoints)
+        circle_z = np.ones((rand_points.shape[0],npoints))*z_d
+
+        spot_array[coord_i,:,:]  = np.array([circle_x[coord_i],circle_y[coord_i],circle_z[coord_i]],np.float32).T
+        out_x[coord_i,:,:] = cx0[coord_i]
+        out_y[coord_i,:,:] = cy0[coord_i]
+
+    X_arr_L = np.zeros((rand_points.shape[0],npoints,3),np.float32)
+    x_arr_L = np.zeros((rand_points.shape[0],npoints,2),np.float32)
+    X_arr_R = np.zeros((rand_points.shape[0],npoints,3),np.float32)
+    x_arr_R = np.zeros((rand_points.shape[0],npoints,2),np.float32)
+
+    for i in range(spot_array.shape[0]):    
+        x_arr_L[i,:,:], X_arr_L[i,:,:], E_L, K_L,P_L = get_image_points(spot_array[i,:,:],PX,PY,thetax=THETA_X_L,thetay = THETA_Y_L,thetaz = THETA_Z_L,trans_x= -C_L[0],trans_y= -C_L[1],trans_z= -C_L[2],F = F,mx = (1/pixel_width),my =(1/pixel_width))
+        x_arr_R[i,:,:], X_arr_R[i,:,:], E_R, K_R,P_R = get_image_points(spot_array[i,:,:],PX,PY,thetax = THETA_X_R,thetay = THETA_Y_R, thetaz = THETA_Z_R,trans_x= -C_R[0],trans_y= -C_R[1],trans_z= -C_R[2],F = F,mx = (1/pixel_width),my =(1/pixel_width))
+
+
+    return x_arr_L,x_arr_R,X_arr_L,X_arr_R,out_x,out_y
